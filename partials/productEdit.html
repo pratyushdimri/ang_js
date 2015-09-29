@@ -1,0 +1,56 @@
+    <button type="button" class="close" ng-click="cancel();">
+        <i class="fa fa-times-circle-o" style="margin:10px;color:blue;"></i>
+    </button>
+    <div class="modal-header">
+        <h3 class="modal-title">Edit product [ID: {{product.id}}]</h3>
+    </div>
+    <div class="modal-body">
+        <form name="product_form" class="form-horizontal" role="form">
+            <form-element label="NAME" mod="product">
+                <input type="text" class="form-control" name="name" placeholder="NAME" ng-model="product.name" ng-disabled="product.id" required focus/>
+                <small class="errorMessage" ng-show="product_form.name.$dirty && product_form.name.$error.number"> Enter the price.</small>
+            </form-element>
+            
+            <form-element label="DESCRIPTION" mod="product">
+            <textarea class="form-control" name="description" placeholder="DESCRIPTION" ng-model="product.description">{{product.description}}</textarea>
+            </form-element>
+            
+            <form-element label="PRICE" mod="product">
+                <input type="number" name="price" class="form-control" placeholder="PRICE" ng-model="product.price" ng-required="true"/>
+                <small class="errorMessage" ng-show="product_form.price.$dirty && product_form.price.$error.number"> Enter number only.</small>
+            </form-element>
+
+           <form-element label="STOCK" mod="product">
+                <input type="text" name="stock" class="form-control" placeholder="STOCK" ng-model="product.stock" ng-required="true"/>
+                <small class="errorMessage" ng-show="product_form.stock.$dirty && product_form.stock.$error.required"> Enter the available stock.</small>
+            </form-element>
+
+            <form-element label="PACKING" mod="product">
+                <input type="text" name="packing" class="form-control" placeholder="PACKING" ng-model="product.packing" ng-required="true"/>
+                <small class="errorMessage" ng-show="product_form.packing.$dirty && product_form.packing.$error.required"> Enter the Packing.</small>
+            </form-element>
+            
+            <form-element label="IMAGE" mod="product">
+                <input type="file" name="image" ng-model="product.image" file-model="product.image" ng-required="true" />
+                <small class="errorMessage" ng-show="product_form.image.$dirty && product_form.image.$error.required"> Select Image.</small>
+                <small class="errorMessage" ng-show="fileTypeValidation"> Only jpeg,jpg and png file type.</small>
+            </form-element>
+
+            <div class="space"></div>
+            <div class="space-4"></div>
+            <div class="modal-footer">
+                <form-element label="">
+                    <div class="text-right">
+                        <a class="btn btn-sm" ng-click="cancel()"><i class="ace-icon fa fa-reply"></i>Cancel</a>
+                        <button ng-click="saveProduct(product);"
+                                ng-disabled="product_form.$invalid"
+                                class="btn btn-sm btn-primary"
+                                type="submit">
+                            <i class="ace-icon fa fa-check"></i>{{buttonText}}
+                        </button>
+                    </div>
+                </form-element>
+            </div>
+        </form>
+    </div>
+

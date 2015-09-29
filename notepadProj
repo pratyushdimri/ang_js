@@ -1,0 +1,105 @@
+<NotepadPlus>
+    <Project name="angularjs">
+        <Folder name="api">
+            <Folder name="libs">
+                <Folder name="Slim">
+                    <Folder name="Exception">
+                        <File name="api\libs\Slim\Exception\Pass.php" />
+                        <File name="api\libs\Slim\Exception\Stop.php" />
+                    </Folder>
+                    <Folder name="Helper">
+                        <File name="api\libs\Slim\Helper\Set.php" />
+                    </Folder>
+                    <Folder name="Http">
+                        <File name="api\libs\Slim\Http\Cookies.php" />
+                        <File name="api\libs\Slim\Http\Headers.php" />
+                        <File name="api\libs\Slim\Http\Request.php" />
+                        <File name="api\libs\Slim\Http\Response.php" />
+                        <File name="api\libs\Slim\Http\Util.php" />
+                    </Folder>
+                    <Folder name="Middleware">
+                        <File name="api\libs\Slim\Middleware\ContentTypes.php" />
+                        <File name="api\libs\Slim\Middleware\Flash.php" />
+                        <File name="api\libs\Slim\Middleware\MethodOverride.php" />
+                        <File name="api\libs\Slim\Middleware\PrettyExceptions.php" />
+                        <File name="api\libs\Slim\Middleware\SessionCookie.php" />
+                    </Folder>
+                    <File name="api\libs\Slim\Environment.php" />
+                    <File name="api\libs\Slim\Log.php" />
+                    <File name="api\libs\Slim\LogWriter.php" />
+                    <File name="api\libs\Slim\Middleware.php" />
+                    <File name="api\libs\Slim\Route.php" />
+                    <File name="api\libs\Slim\Router.php" />
+                    <File name="api\libs\Slim\Slim.php" />
+                    <File name="api\libs\Slim\View.php" />
+                </Folder>
+            </Folder>
+            <Folder name="v1">
+                <File name="api\v1\.htaccess" />
+                <File name="api\v1\authentication.php" />
+                <File name="api\v1\config.php" />
+                <File name="api\v1\dbHelper.php" />
+                <File name="api\v1\index.php" />
+                <File name="api\v1\passwordHash.php" />
+                <File name="api\v1\product.php" />
+            </Folder>
+        </Folder>
+        <Folder name="app">
+            <File name="app\app.js" />
+            <File name="app\authCtrl.js" />
+            <File name="app\data.js" />
+            <File name="app\directives.js" />
+            <File name="app\productCtrl.js" />
+            <File name="app\promiseCtrl.js" />
+        </Folder>
+        <Folder name="css">
+            <File name="css\bootstrap.min.css" />
+            <File name="css\custom.css" />
+            <File name="css\font-awesome.min.css" />
+            <File name="css\toaster.css" />
+        </Folder>
+        <Folder name="fonts">
+            <File name="fonts\fontawesome-webfont.eot" />
+            <File name="fonts\fontawesome-webfont.svg" />
+            <File name="fonts\fontawesome-webfont.ttf" />
+            <File name="fonts\fontawesome-webfont.woff" />
+            <File name="fonts\FontAwesome.otf" />
+        </Folder>
+        <Folder name="images">
+            <File name="images\ap0WBOE_700b.jpg" />
+            <File name="images\dhub.sql" />
+            <File name="images\Untitled Diagram (1).jpg" />
+        </Folder>
+        <Folder name="js">
+            <File name="js\angular-animate.min.js" />
+            <File name="js\angular-route.min.js" />
+            <File name="js\angular.min.js" />
+            <File name="js\bootstrap.min.js" />
+            <File name="js\jquery.min.js" />
+            <File name="js\toaster.js" />
+            <File name="js\ui-bootstrap-tpls-0.11.2.min.js" />
+        </Folder>
+        <Folder name="nbproject">
+            <Folder name="private">
+                <File name="nbproject\private\config.properties" />
+                <File name="nbproject\private\private.properties" />
+                <File name="nbproject\private\private.xml" />
+            </Folder>
+            <File name="nbproject\project.properties" />
+            <File name="nbproject\project.xml" />
+        </Folder>
+        <Folder name="partials">
+            <File name="partials\dashboard.html" />
+            <File name="partials\login.html" />
+            <File name="partials\productEdit.html" />
+            <File name="partials\products.html" />
+            <File name="partials\products_withoutpaging.html" />
+            <File name="partials\promise.html" />
+            <File name="partials\signup.html" />
+        </Folder>
+        <File name="angularcode_auth.sql" />
+        <File name="angularcode_products.sql" />
+        <File name="index.html" />
+        <File name="index1.php" />
+    </Project>
+</NotepadPlus>
