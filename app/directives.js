@@ -29,3 +29,26 @@ app.directive('passwordMatch', [function () {
         }
     };
 }]);
+
+app.directive('fileModel', ['$parse', function ($parse) {
+    return {
+        restrict: 'A',
+		require: 'ngModel',
+        link: function(scope, element, attrs, ngModalCtrl) {            
+            var model = $parse(attrs.fileModel);            
+            var modelSetter = model.assign;            
+            ngModalCtrl.$setValidity('fileRequired',element.val() != '');
+            /**
+             * Remove 0 key and pass element[0].files to send multiple files and append form data in foreach loop in factory
+             */
+            element.bind('change', function(){
+				ngModalCtrl.$setValidity('fileRequired',element.val() != '');                
+                scope.$apply(function(){
+                    modelSetter(scope, element[0].files[0]);
+					console.log(element);
+					ngModalCtrl.$render;
+                });
+            });
+        }
+    };
+}]);

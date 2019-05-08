@@ -25,7 +25,7 @@
                     <div class="form-group">
                         <label class="col-sm-3 control-label no-padding-right" for="email"> Email </label>
                         <div class="col-sm-7">
-                           <span class="block input-icon input-icon-right">
+                           <span class="block input-icon input-icon-right" ng-init="login.email = 'pratyush.dimri@indianic.com'">
                                 <input type="email" class="form-control" placeholder="Email" name="email" ng-model="login.email" required focus/>
                                 <i class="ace-icon fa fa-user"></i>
                                 <span class="error" ng-show="loginForm.email.$error.email">This is not a valid email.</span>                                                               
@@ -35,7 +35,7 @@
                     <div class="form-group">
                         <label class="col-sm-3 control-label no-padding-right" for="password"> Password </label>
                         <div class="col-sm-7">
-                           <span class="block input-icon input-icon-right">
+                           <span class="block input-icon input-icon-right" ng-init="login.password = 'indianic'">
                                 <input type="password" class="form-control" placeholder="Password" ng-model="login.password" required/>
                                 <i class="ace-icon fa fa-lock"></i>
                             </span>

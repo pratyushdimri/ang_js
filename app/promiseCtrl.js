@@ -25,7 +25,7 @@ app.controller('promiseCtrl', function ($scope, $q, Data, $timeout) {
 	}	
 	
 	var PromiseCheckFunction = getProductList();//at this point it returns the defer.promise object. But 3 then callbacks functions(success,error & notify) only runs if we trigger defer.resolve,reject and notify respectively.
-	
+	alert('hi');
 	PromiseCheckFunction.then(
 	function(succesRes){
 		$scope.result = succesRes;

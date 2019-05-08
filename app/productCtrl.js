@@ -1,4 +1,4 @@
-app.controller('productCtrl', function ($scope, $modal,$filter,Data, $timeout) {
+app.controller('productCtrl', function ($scope, $modal,$filter,Data, $timeout, $q) {
    $scope.product = {};
     
     /* For without paging remove this comment and use products_withoutpaging.html in partial folder
@@ -10,14 +10,14 @@ app.controller('productCtrl', function ($scope, $modal,$filter,Data, $timeout) {
     /**
      * For Pagination and sorting
      ***************************************************************************/
-    Data.get('product').then(function(data){
+	Data.get('product').then(function(data){
         $scope.products = data.data;        
         $scope.currentPage = 1; //current page
         $scope.entryLimit = 5; //max no of items to display in a page
         $scope.filteredItems = $scope.products.length; //Initially for no filter
         $scope.totalItems = $scope.products.length;        
     });
-    
+	
     $scope.setPage = function(pageNo) {
         $scope.currentPage = pageNo;
     };

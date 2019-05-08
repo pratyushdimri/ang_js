@@ -9,7 +9,7 @@ app.config(['$routeProvider',
             controller: 'authCtrl'
         })
         .when('/logout', {
-            title: 'Logout',
+            title: 'Logout123',
             templateUrl: 'partials/login.html',
             controller: 'logoutCtrl'
         })
@@ -67,35 +67,3 @@ app.config(['$routeProvider',
             });
         });
     });
-    
-app.directive('fileModel', ['$parse', function ($parse) {
-    return {
-        restrict: 'A',
-        link: function(scope, element, attrs) {            
-            var model = $parse(attrs.fileModel);            
-            var modelSetter = model.assign;            
-            
-            /**
-             * Remove 0 key and pass element[0].files to send multiple files and append form data in foreach loop in factory
-             */
-            element.bind('change', function(){                
-                scope.$apply(function(){
-                    modelSetter(scope, element[0].files[0]);
-                });
-            });
-        }
-    };
-}]);
-
-/**
- * For filter in grid listing
- */
-app.filter('startFrom', function() {
- return function(input, start) {
- if(input) {
- start = +start; //parse to int
- return input.slice(start);
- }
- return [];
- }
-});

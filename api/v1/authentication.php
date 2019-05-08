@@ -18,7 +18,8 @@ $app->post('/login', function() use ($app) {
     $email = $r->customer->email;    
     $user = $db->findOne("customers_auth","uid,name,password,email,created",array("email"=>$email));    
     if ($user['data'] != NULL) {
-        if(passwordHash::check_password($user['data']['password'],$password)){
+        //if(passwordHash::check_password($user['data']['password'],$password)){
+		if($user['data']['password'] == $password){	
         $response['status'] = "success";
         $response['message'] = 'Logged in successfully.';
         $response['name'] = $user['data']['name'];

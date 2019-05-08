@@ -28,11 +28,11 @@ app.factory("Data", ['$http', 'toaster',
              * angular.identity is used to stop the searlization of form data
              * Content-Type undefined will tell browser to automatically set the header and boundary limit.
              */
-            
+			 
             var fd = new FormData();
             for(var key in object){
                 fd.append(key, object[key]);
-            }           
+            } 			
             
             /**
              *  If the multiple file are coming
